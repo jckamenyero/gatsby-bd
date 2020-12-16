@@ -1,26 +1,28 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import books from "../data/data.json"
 
 const IndexPage = () => {
     
-    //const image_path = '../../static/images/';
-
-    const url = '../../data.json';
-    const [books, setBooks] = useState([]);
     const [q, setQ] = useState("");
     
+    /*
+    //const image_path = '../../static/images/';
+    const [books, setBooks] = useState([]);
+    const url = '../../data.json';
     const getBooks = async () => {
         const response = await fetch(url);
         const data = await response.json();
         setBooks(data)
         //console.log(data);
     }
-
+    
     useEffect (() => {
         getBooks();
     }, []);
+    */
 
     const search = (rows) => {
         return rows.filter(
